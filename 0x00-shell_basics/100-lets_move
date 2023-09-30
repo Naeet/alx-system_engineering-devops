@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f | grep -E '/[A-Z][^/]*$' | xargs mv -t /tmp/u
+mn [[:upper:]]* /tmp/u
