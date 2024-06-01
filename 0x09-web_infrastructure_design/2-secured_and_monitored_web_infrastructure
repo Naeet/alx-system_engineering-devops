@@ -1,0 +1,25 @@
+Three Firewalls: Firewalls are added to control and monitor incoming and outgoing network traffic. They help protect the servers and other network components from unauthorized access, malware, and other security threats.
+
+SSL Certificate for HTTPS: An SSL certificate is used to encrypt data transmitted between the client's browser and the web server, ensuring that sensitive information such as login credentials, payment details, and personal data is securely transmitted over the internet.
+
+Three Monitoring Clients: These clients are used to collect data from the servers and network devices and send it to a monitoring service like Sumo Logic. Monitoring is essential for tracking the health, performance, and security of the infrastructure, identifying issues proactively, and ensuring optimal operation.
+
+Now, let's address some specifics:
+
+Firewalls: Firewalls are essential for controlling network traffic and enforcing security policies. They inspect incoming and outgoing packets and determine whether to allow or block them based on predefined rules. This helps protect the infrastructure from unauthorized access, malware, and other security threats.
+
+HTTPS Traffic: Serving traffic over HTTPS encrypts data transmitted between the client's browser and the web server, ensuring confidentiality and integrity. This is crucial for protecting sensitive information and maintaining user privacy and trust.
+
+Monitoring: Monitoring is used to track the performance, availability, and security of the infrastructure in real-time. It helps detect and diagnose issues, optimize resource utilization, and ensure that the infrastructure meets service-level agreements (SLAs).
+
+Data Collection: The monitoring tool collects data from various sources, including server logs, performance metrics, network traffic, and system events. It aggregates and analyzes this data to provide insights into the health and performance of the infrastructure.
+
+Monitoring Web Server QPS: To monitor the web server's queries per second (QPS), you can configure the monitoring tool to collect and analyze relevant metrics, such as HTTP request rates, response times, and server CPU utilization. By tracking QPS over time, you can identify trends, detect anomalies, and ensure that the web server can handle the expected load.
+
+Now, let's address the issues with this infrastructure:
+
+Terminating SSL at the Load Balancer Level: Terminating SSL at the load balancer means that decrypted traffic is passed between the load balancer and the servers, potentially exposing sensitive data to interception or tampering within the internal network. It's recommended to use end-to-end encryption to protect data throughout its entire journey.
+
+Single MySQL Server for Writes: Having only one MySQL server capable of accepting write operations introduces a single point of failure and can lead to performance bottlenecks during periods of high write activity. It's advisable to implement a database replication or clustering solution to distribute write operations and ensure high availability and scalability.
+
+Uniformity in Server Components: Having servers with identical components (e.g., database, web server, and application server) may lead to a lack of diversity in the infrastructure, increasing the risk of widespread failures due to software bugs, vulnerabilities, or configuration errors affecting all servers simultaneously. Introducing diversity in server configurations can help mitigate this risk and improve overall resilience.

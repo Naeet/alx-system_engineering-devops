@@ -1,0 +1,20 @@
+One Server: This server will host the application components - the web server, application server, and database. It's essential to have at least one server to host these components.
+
+One Load Balancer (HAProxy) configured as a cluster: The load balancer serves as a single entry point for incoming traffic, distributing it across multiple servers hosting the application components. By configuring HAProxy as a cluster, we ensure high availability and fault tolerance. If one HAProxy instance fails, the other can continue routing traffic without disruption.
+
+Split Components (Web Server, Application Server, Database) with Their Own Servers: Separating the components onto individual servers offers several benefits:
+
+Web Server: Dedicated server for serving web content efficiently and handling incoming HTTP requests from clients.
+Application Server: Dedicated server for executing the application logic, managing user sessions, and handling dynamic content generation.
+Database Server: Dedicated server for storing and managing the application's data, ensuring data integrity, and providing scalability.
+Now, let's delve into the reasons for adding each element:
+
+One Server: It's necessary to have at least one server to host the application components. This server will run the necessary software and services to serve the application to users.
+
+Load Balancer (HAProxy) configured as a cluster: By using a load balancer, we can distribute incoming traffic across multiple servers, improving performance, scalability, and fault tolerance. Configuring HAProxy as a cluster ensures redundancy and high availability of the load balancing functionality.
+
+Split Components with Their Own Servers: Separating the components onto individual servers allows for better resource allocation, scalability, and fault isolation. Each component can be optimized and scaled independently based on its specific requirements, and failures or performance issues in one component won't necessarily affect the others. This modular approach also simplifies management and maintenance tasks.
+
+
+
+
