@@ -1,0 +1,17 @@
+A server is a computer program or device that provides functionality for other programs or devices, known as clients. In the context of web services, a server typically refers to a computer system that hosts websites, applications, or other online services and responds to requests from client devices over a network.
+
+A domain name serves as a human-readable label that represents a unique address on the internet. It plays a crucial role in helping users locate and access websites and other resources online. Domain names are organized hierarchically and are translated into IP addresses by the Domain Name System (DNS) when users request to access a website.
+
+The "www" in www.foobar.com typically represents a DNS record known as a CNAME (Canonical Name) record. It is used to alias one domain name to another, allowing the domain to resolve to the same IP address as another domain.
+
+The web server's role is to handle HTTP requests from clients, such as web browsers, and deliver web pages, images, or other content in response. It processes requests for static content (like HTML, CSS, and images) and can also execute server-side scripts to generate dynamic content.
+
+An application server is responsible for executing the logic of web applications, managing application operations, and handling tasks such as user authentication, session management, and data processing. It works closely with the web server to fulfill client requests, often by invoking business logic, accessing databases, or integrating with other services.
+
+A database server is a specialized type of server that manages and stores data for retrieval and manipulation by other applications or servers. It provides functionalities such as data storage, retrieval, updating, and deletion, and it typically uses a database management system (DBMS) to organize and manage data efficiently.
+
+The server communicates with the user's computer over the internet using various networking protocols, most commonly HTTP (Hypertext Transfer Protocol) for web-based communications. When a user requests a website, their browser sends an HTTP request to the server, which then processes the request and sends back the requested web page or resource using HTTP.
+
+
+
+
